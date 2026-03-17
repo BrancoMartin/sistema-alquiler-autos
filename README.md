@@ -23,7 +23,6 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 * CSS 
 
 ## ▶️ Cómo ejecutar el proyecto
-## ▶️ Cómo ejecutar el proyecto
 
 ### Backend
 
