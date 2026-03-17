@@ -1,0 +1,60 @@
+import { toast } from "react-toastify";
+
+export const CrearPago = async (pago) => {
+  try {
+    const response = await fetch("http://localhost:3000/pays", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(pago),
+    });
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+    toast.success("¡Pago realizado con éxito!");
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error en CrearPago:", error);
+    toast.error(`Error al procesar el pago`);
+    throw error;
+  }
+};
+
+export const ObtenerAutos = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/cars", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error en ObtenerReservas:", error);
+    throw error;
+  }
+};
+
+export const ObtenerUsuarios = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/users", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error en ObtenerReservas:", error);
+    throw error;
+  }
+};

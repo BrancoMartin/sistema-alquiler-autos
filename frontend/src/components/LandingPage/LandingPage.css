@@ -1,0 +1,708 @@
+.containerLanding {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  display: flex;
+  padding: 0;
+  width: 100%;
+}
+
+.containerContent {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+}
+
+.contentLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4rem 3rem 2rem 4rem;
+  background: #ffffff;
+  position: relative;
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 520px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+  letter-spacing: -0.02em;
+}
+
+.highlight {
+  color: #764ba2;
+  position: relative;
+}
+
+.textWelcome {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.containerButton {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonLogin,
+.buttonRegisterLanding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 160px;
+}
+
+.buttonLogin {
+  background: #764ba2;
+  color: white;
+  box-shadow: 0 4px 14px 0 rgba(178, 59, 246, 0.25);
+}
+
+.buttonLogin:hover {
+  background: #a86ce9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(178, 59, 246, 0.25);
+}
+
+.buttonRegisterLanding {
+  background: transparent;
+  color: #764ba2;
+  border: 2px solid #764ba2;
+}
+
+.buttonRegisterLanding:hover {
+  background: #764ba2;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(178, 59, 246, 0.25);
+}
+
+.container-project {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-style: italic;
+  margin-top: auto;
+}
+
+.contentRight {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  position: relative;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
+  z-index: 1;
+}
+
+/* Animación fadeIn mejorada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textContent {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.heroImage {
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 2rem 0 2rem 0;
+  color: #1e293b;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #1e293b;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.copyright {
+  font-family: Poppins;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* ESTADISTICAS */
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  height: 60vh;
+  background-color: #fff;
+}
+
+.h3-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.statBox {
+  width: 30%;
+  background-color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+}
+.width-cont {
+  min-width: 250px;
+}
+.statBox h4 {
+  font-size: 3rem;
+  color: #764ba2;
+}
+
+.statBox p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+.sectionDestaca {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  border-top: 2px solid #ccc;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.ulDestaca {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.ulDestaca li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.bContenido {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Sección informativa profesional */
+.infoSection {
+  background: #fff;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.infoContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  width: 100%;
+}
+
+.mainCard,
+.benefitsCard,
+.processCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mainCard:hover,
+.benefitsCard:hover,
+.processCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.mainCard {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  color: white;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.benefitsCard {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+}
+
+.processCard {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: linear-gradient(135deg, #eca323 0%, #b46912 100%);
+  color: white;
+  min-height: 320px;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardContent h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.mainCard p {
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  max-width: 85%;
+}
+
+.cardIcon {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  font-size: 6rem;
+  opacity: 0.15;
+  transform: rotate(15deg);
+}
+
+/* Lista de beneficios */
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.benefitsList li {
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 0;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefitsList li:last-child {
+  border-bottom: none;
+}
+
+.checkIcon {
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.processList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.processList li {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.processList li:last-child {
+  border-bottom: none;
+}
+
+.stepNumber {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.stepIcon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.mainCard::before,
+.benefitsCard::before,
+.processCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 20% 20%,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 50%
+  );
+  z-index: 1;
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainCard,
+.benefitsCard,
+.processCard {
+  animation: slideUp 0.6s ease-out;
+}
+
+.benefitsCard {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.processCard {
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
+}
+/* Media Queries Responsive */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .contentLeft {
+    padding: 3rem 2rem 2rem 3rem;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+  }
+
+  .textWelcome {
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+  }
+
+  .buttonLogin,
+  .buttonRegisterLanding {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    min-width: 140px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .containerContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .contentLeft {
+    order: 1;
+    padding: 2rem 1.5rem 1.5rem;
+    min-height: 60vh;
+  }
+
+  .contentRight {
+    order: 2;
+    min-height: 40vh;
+  }
+
+  .textContent {
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .textWelcome {
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+  }
+
+  .containerButton {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .contentLeft {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .containerButton {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .buttonLogin,
+  .buttonRegisterLanding {
+    width: 100%;
+    min-width: unset;
+    padding: 1rem 1.5rem;
+  }
+
+  .contentRight {
+    min-height: 35vh;
+  }
+
+  .heroImage {
+    width: 90%;
+    height: 80%;
+    border-radius: 15px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+  .contentLeft {
+    padding: 1rem 0.75rem 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2rem);
+  }
+
+  .textWelcome {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .buttonLogin,
+  .buttonRegisterLanding {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* SEGUNDA SECTION */
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .infoSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .infoContainer {
+    gap: 1.5rem;
+  }
+
+  .mainCard,
+  .benefitsCard,
+  .processCard {
+    padding: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .infoSection {
+    padding: 3rem 1rem;
+  }
+
+  .infoContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1.5rem;
+  }
+
+  .mainCard {
+    grid-column: 1;
+    grid-row: 1;
+    min-height: 200px;
+  }
+
+  .benefitsCard {
+    grid-column: 1;
+    grid-row: 2;
+    order: 3;
+  }
+
+  .processCard {
+    grid-column: 1;
+    grid-row: 3;
+    order: 2;
+    min-height: 280px;
+  }
+
+  .mainCard p {
+    max-width: 100%;
+  }
+
+  .cardIcon {
+    font-size: 4rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .infoSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .mainCard,
+  .benefitsCard,
+  .processCard {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .benefitsList li,
+  .processList li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .stepNumber {
+    width: 25px;
+    height: 25px;
+    font-size: 0.75rem;
+  }
+
+  .stepIcon {
+    font-size: 1rem;
+  }
+
+  .cardIcon {
+    font-size: 3rem;
+    bottom: -5px;
+    right: -5px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 360px) {
+  .mainCard,
+  .benefitsCard,
+  .processCard {
+    padding: 1.25rem;
+  }
+
+  .benefitsList li,
+  .processList li {
+    font-size: 0.85rem;
+  }
+}

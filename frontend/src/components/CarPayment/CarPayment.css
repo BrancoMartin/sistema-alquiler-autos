@@ -1,0 +1,773 @@
+.contenedorGeneral {
+  margin: 0;
+  padding: 0;
+  height: 1400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5rem;
+  height: 100%;
+}
+
+body.dark .contenedorGeneral {
+  background-color: rgb(37, 32, 32);
+}
+
+/* Factracion */
+.datosFacturacion {
+  width: 45rem;
+  height: 22rem;
+  border-radius: 0.7rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+body.dark .DatosFacturacion {
+  background-color: black;
+  box-shadow: 3px 3px 6px 3px #5e5e5e5d;
+}
+
+.titleDatos {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.subtituloDatos {
+  margin: 0.3rem 0 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #90a3bf;
+}
+
+.paso1 {
+  font-size: 15px;
+  position: absolute;
+  margin-left: 37rem;
+  margin-top: -4rem;
+  color: #90a3bf;
+}
+
+.labelDatos {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.inputDatos {
+  width: 15rem;
+  height: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 0.6rem;
+  border: none;
+  padding-left: 1rem;
+  border: 1px solid #a8a8a8;
+}
+
+.inputDatos:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.error {
+  height: 1rem;
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.gridDatosFacturacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 5.2em 5.2em;
+  gap: 0.6em;
+  margin-left: 3em;
+  padding: 1.5rem 2rem;
+}
+
+.cajaInputDatos {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Metodo pago */
+.metodoPago {
+  width: 45rem;
+  min-height: 10rem;
+  background-color: #ffffff;
+  border-radius: 0.7rem;
+  margin: 1rem;
+  margin-top: 2rem;
+  padding-bottom: 1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+body.dark .metodoPago {
+  background-color: #000000;
+  box-shadow: 3px 3px 6px 3px #5e5e5e5d;
+}
+
+.tituloMetodo {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.subtituloMetodo {
+  margin: 0.3rem 0 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #90a3bf;
+}
+
+.paso2 {
+  margin: 1rem;
+  font-size: 15px;
+  position: absolute;
+  margin-left: 37rem;
+  margin-top: -4rem;
+  color: #90a3bf;
+}
+
+.ingresoTarjeta {
+  width: 35rem;
+  min-height: 3rem;
+  background-color: #f0f0f0;
+  border-radius: 0.7rem;
+  margin: 1rem;
+  margin-left: 3em;
+  cursor: pointer;
+  transition: ease all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.ingresoTarjeta:hover {
+  color: #ffffff;
+  background-color: #6366f1;
+  box-shadow: 3px 3px 6px 3px #9797975d;
+}
+
+.ingresoTarjetaClickeado {
+  width: 35rem;
+  min-height: 3rem;
+  background-color: #f0f0f0;
+  border-radius: 0.7rem;
+  margin: 1rem;
+  margin-left: 3em;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+body.dark .ingresoTarjeta {
+  background-color: #000000;
+  outline: solid 1px #ffffff;
+  box-shadow: 3px 3px 6px 3px #ffffff5d;
+  transition: ease all 0.3s;
+}
+
+body.dark .ingresoTarjetaClickeado {
+  background-color: #000000;
+  outline: solid 1px #ffffff;
+  box-shadow: 3px 3px 6px 3px #ffffff5d;
+}
+
+body.dark .ingresoTarjeta:hover {
+  color: #000000;
+  background-color: #a201e2a4;
+  box-shadow: 3px 3px 6px 3px #5e5e5e5d;
+  outline: solid #ffffff 1px;
+}
+
+.seleccion {
+  margin-left: 1.5rem;
+}
+.selectMetodo {
+  width: 12rem;
+  height: 1.5rem;
+  margin: 1rem;
+  margin-left: 5rem;
+
+  font-weight: 600;
+}
+
+.seleccionTarjeta {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.eleccionTarjeta {
+  position: absolute;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.logosTarjeta {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-bottom: -0.8rem;
+  margin-left: 1rem;
+}
+
+.labelMetodo {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.inputMetodo {
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  padding-left: 1rem;
+}
+
+.gridDatosTarjeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 7rem 7rem;
+  gap: 0.6em;
+  padding: 1.5rem 2rem;
+}
+
+.cajaInputTarjeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.cajaTransferenciaBancaria {
+  transition: all 0.2s;
+}
+
+.cajaTransferenciaBancaria,
+.cajaTransferenciaBancariaClickeado {
+  width: 35rem;
+  min-height: 3rem;
+  background-color: #f0f0f0;
+  border-radius: 0.7rem;
+  margin: 1rem 1rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+body.dark .cajaTransferenciaBancaria {
+  background-color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+
+  outline: solid 1px #ffffff;
+  transition: all 0.3s;
+}
+
+body.dark .cajaTransferenciaBancariaClickeado {
+  width: 35rem;
+  min-height: 3rem;
+  border-radius: 0.7rem;
+  margin: 1rem 1rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #000000;
+  box-shadow: 3px 3px 6px 3px #ffffff5d;
+  outline: solid 1px #ffffff;
+}
+
+.cajaTransferenciaBancaria:hover {
+  color: #ffffff;
+  background-color: #6366f1;
+  box-shadow: 3px 3px 6px 3px #9797975d;
+}
+
+body.dark .cajaTransferenciaBancaria:hover {
+  color: #000000;
+  background-color: #a201e2a4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+
+  outline: solid #ffffff 1px;
+}
+
+.botonArchivo {
+  height: 3.5rem;
+  width: 8rem;
+  border-radius: 0.55rem;
+  font-size: 0.75rem;
+  font-family: "poppins";
+  padding: 0.5rem;
+  background-color: #6366f1;
+  color: #ffffff;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+body.dark .botonArchivo {
+  background-color: #493569;
+  color: #000000;
+  transition: all 0.3s;
+}
+
+body.dark .botonArchivo:hover {
+  background-color: #7956b1;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.botonArchivo:hover {
+  background-color: #473fdb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.containerPago {
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.containerPago.Visible {
+  opacity: 1;
+}
+
+.labelTarjeta {
+  margin: auto;
+  margin-left: 1.5rem;
+  margin-top: 10px;
+}
+
+.eleccionTranferencia {
+  position: absolute;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.conteinerTransferencia {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.conteinerTransferencia.Visible {
+  display: flex;
+  opacity: 1;
+}
+
+.conteinerTransfer {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.tituloTransferencia {
+  margin-top: 1rem;
+}
+
+.containerCbuTransfer {
+  margin: 0.7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerArrastre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0.3rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  border: solid #4e0000 2px;
+  background-color: #ffffff;
+  min-height: 10rem;
+  box-shadow: 4px 4px 4px 4px rgba(82, 0, 0, 0.541);
+  border-radius: 1rem;
+}
+
+body.dark .containerArrastre {
+  background-color: #000000;
+}
+
+.containerArrastre.Activo {
+  border: solid #00791a 2px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 122, 31, 0.247);
+}
+
+.botonSacarArchivo {
+  border-radius: 3rem;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem 0 0.2rem 0;
+  padding: 0.3rem;
+  border: #000000 solid 1px;
+  cursor: pointer;
+  background-color: #ff0000;
+  color: #ffffff;
+  transition: 0.2s;
+}
+
+body.dark .botonSacarArchivo {
+  border: #ffffff solid 1px;
+}
+
+.botonSacarArchivo:hover {
+  background-color: #ff0000d5;
+  color: #ffffff;
+}
+
+.comprobante {
+  margin: 0.4rem 0 1rem 0;
+}
+
+.transferenciaBancaria {
+  margin: auto;
+  margin-left: 1.5rem;
+}
+
+/* Info importante */
+.infoImportante {
+  width: 45rem;
+  height: 35.5rem;
+  border-radius: 0.7rem;
+  background-color: #ffffff;
+  margin: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+body.dark .infoImportante {
+  background-color: black;
+  box-shadow: 4px 4px 8px 3px #5e5e5e5d;
+}
+
+.tituloInfo {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.subtituloInfo {
+  font-weight: 400;
+  margin: 0.3rem 0 0 1.5rem;
+  font-size: 0.875rem;
+  color: #90a3bf;
+}
+
+.paso3 {
+  margin: 1rem;
+  font-size: 15px;
+  position: absolute;
+  margin-left: 37rem;
+  margin-top: -4rem;
+  color: #90a3bf;
+}
+
+.cajaItems {
+  width: 60rem;
+  border-radius: 0.7rem;
+  margin: 2rem 0 0 1rem;
+}
+
+.tituloItems {
+  margin: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.liItems {
+  margin-left: 2.7rem;
+  font-weight: 500;
+}
+
+.cajaAceptoTerminos {
+  display: flex;
+  margin-top: 3rem;
+  margin: 3rem 0 0 2rem;
+}
+
+.aceptoTerminos {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.313;
+  border: solid black 0.063;
+  margin-top: 0.2rem;
+  margin-right: 0.5rem;
+}
+
+/* ResumenDeAlquiler.css */
+
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.contenedor-aside {
+  width: 100%;
+  max-width: 28rem;
+}
+
+.resumen-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Header Section */
+.header-seccion {
+  background: linear-gradient(to bottom right, #6366f1, #6366f1);
+  padding: 1.5rem;
+  color: #ffffff;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.titulo-principal {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin: 0;
+}
+
+.subtitulo-principal {
+  color: #d3d3e4;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Content Padding */
+.contenido-padding {
+  padding: 1.5rem;
+}
+
+/* Auto Info Box */
+.auto-info-box {
+  background: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.auto-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.imagen-auto {
+  width: 8rem;
+  height: fit-content;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.auto-detalles {
+  flex: 1;
+}
+
+.nombre-auto {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.brand-auto {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 0.5rem 0;
+}
+
+.valoracion-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.estrellas-flex {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.estrella-icon {
+  color: #fbbf24;
+  width: 1rem;
+  height: 1rem;
+}
+
+.texto-valoracion {
+  font-size: 0.875rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Price Breakdown */
+.precios-container {
+  margin-bottom: 1.5rem;
+}
+
+.precio-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.precio-label {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.precio-valor {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.separador-gradiente {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #d1d5db, transparent);
+  margin: 1rem 0;
+}
+
+/* Total Box */
+.total-box {
+  background-color: #eff6ff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 2px solid #9596e9;
+  margin-bottom: 1rem;
+}
+
+.total-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-titulo {
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.total-subtitulo {
+  color: #4b5563;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.total-precio-container {
+  text-align: right;
+}
+
+.total-precio {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #4346ca;
+  margin: 0;
+}
+
+/* Dark Mode Support */
+body.dark .contenedor-principal {
+  background-color: #111827;
+}
+
+body.dark .resumen-card {
+  background-color: #1f2937;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .auto-info-box {
+  background: linear-gradient(to bottom right, #374151, #4b5563);
+  border-color: #4b5563;
+}
+
+body.dark .nombre-auto {
+  color: #f9fafb;
+}
+
+body.dark .precio-label,
+body.dark .precio-valor {
+  color: #e5e7eb;
+}
+
+body.dark .total-box {
+  background-color: #1e3a8a;
+  border-color: #3b82f6;
+}
+
+body.dark .total-titulo {
+  color: #f9fafb;
+}
+
+body.dark .total-subtitulo {
+  color: #d1d5db;
+}
+
+body.dark .separador-gradiente {
+  background: linear-gradient(to right, transparent, #4b5563, transparent);
+}
+
+.botonRentar {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 0.7rem;
+  background-color: #6366f1;
+  margin: 1rem;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+body.dark .botonRentar {
+  background-color: #493569;
+  color: #000000;
+  transition: 0.3s;
+}
+body.dark .botonRentar:hover {
+  background-color: #7956b1;
+}
+
+.botonCancelar {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 0.7rem;
+  border: solid black 1px;
+  margin: 1rem;
+  transition: 0.2s;
+}
+
+.botonRentar:hover {
+  background-color: #473fdb;
+}
+
+.botonCancelar:hover {
+  background-color: #e90303ab;
+  color: #ffffff;
+}

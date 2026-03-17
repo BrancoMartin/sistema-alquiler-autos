@@ -1,0 +1,144 @@
+.heroSection {
+  width: 100%;
+  height: 90vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(111deg, #a86ce9 0%, #7f7df7 100%);
+  padding-top: 80px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 750px;
+  padding: 2rem;
+  animation: fadeIn 1s ease-out;
+  padding-top: 9rem;
+}
+
+.textContainer h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: #ffff;
+}
+
+.textContainer p {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-family: "Play fair display", sans-serif;
+  font-weight: 300;
+  color: #f3f3f3;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btnContainer button {
+  color: #fff;
+  background: linear-gradient(90deg, #6555fd, #8c6dfb);
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(101, 85, 253, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnContainer button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(101, 85, 253, 0.5);
+  background: linear-gradient(90deg, #7f7df7, #a385ff);
+}
+
+.btnContainer button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btnContainer button:hover::after {
+  left: 100%;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .heroSection {
+    height: 80vh;
+    padding: 1.5rem;
+  }
+
+  .textContainer h1 {
+    font-size: 2.4rem;
+  }
+
+  .textContainer p {
+    font-size: 1rem;
+  }
+
+  .btnContainer button {
+    padding: 0.9rem 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .textContainer h1 {
+    font-size: 2rem;
+  }
+
+  .textContainer p {
+    font-size: 0.95rem;
+  }
+
+  .btnContainer button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 260px;
+  }
+}

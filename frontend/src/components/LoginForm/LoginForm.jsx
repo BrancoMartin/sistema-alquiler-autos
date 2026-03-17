@@ -1,0 +1,80 @@
+import { useState } from "react";
+import "./LoginForm.css";
+import { FaLock } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+
+const LoginForm = ({ onSubmit, errores, refs }) => {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
+  };
+  return (
+    <form className="login-form" onSubmit={handleSubmit}>
+      <h2 className="login-title">Iniciar Sesión</h2>
+      <div className="form-group">
+        <label htmlFor="email" className="label-with-icon">
+          <MdEmail size={13} />
+          Correo electrónico
+        </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="correo@test.com"
+          value={formData.email}
+          onChange={handleChange}
+          ref={refs.emailRef}
+        />
+        <p className={`error-message-login ${errores.email ? "visible" : ""}`}>
+          {errores.email || ""}
+        </p>
+      </div>
+      <div className="form-group">
+        <label htmlFor="password" className="label-with-icon">
+          <FaLock size={12} />
+          Contraseña
+        </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="********"
+          value={formData.password}
+          onChange={handleChange}
+          ref={refs.passwordRef}
+        />
+        <p
+          className={`error-message-login ${errores.password ? "visible" : ""}`}
+        >
+          {errores.password || ""}
+        </p>
+      </div>
+      <div className="button-container">
+        <button type="submit" className="login-button">
+          Iniciar Sesión
+        </button>
+      </div>
+      <p className="forgot-password">
+        ¿Olvidaste tu contraseña?{" "}
+        <a href="/password-recovery">Recuperar Contraseña</a>
+      </p>
+      <p className="register-link">
+        ¿No tienes cuenta? <a href="/register">Regístrate</a>
+      </p>
+    </form>
+  );
+};
+
+export default LoginForm;

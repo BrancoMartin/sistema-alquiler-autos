@@ -1,0 +1,159 @@
+/* Recomendados.module.css actualizado */
+.recomendadosSection {
+  width: 100%;
+  padding: 4rem 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 2rem;
+}
+
+.titleConteiner {
+  color: #1a202c;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.titleConteiner h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 ;
+}
+
+.titleConteiner p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0;
+  color: #718096;
+}
+
+.navigationButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #4f46e5;
+  color: white;
+  border-color: #4f46e5;
+}
+
+.recomendadosConteiner {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1rem 0.5rem;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.recomendadosConteiner::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Ajustes para las tarjetas dentro del contenedor */
+.recomendadosConteiner > * {
+  flex: 0 0 auto;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1400px) {
+    .titleConteiner h3{
+        font-size: 1.6rem;
+    }
+
+    .titleConteiner p{
+      font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 1200px) {
+  .recomendadosConteiner {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .headerContainer {
+    padding: 0 1rem;
+  }
+
+  .titleConteiner h3 {
+    font-size: 1.8rem;
+  }
+
+  .titleConteiner p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recomendadosSection {
+    padding: 3rem 1rem;
+  }
+
+  .headerContainer {
+    margin-bottom: 1.5rem;
+  }
+
+  .recomendadosConteiner {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recomendadosSection {
+    padding: 2rem 0.5rem;
+  }
+
+  .headerContainer {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .titleConteiner h3 {
+    font-size: 1.5rem;
+  }
+
+  .titleConteiner p {
+    font-size: 0.9rem;
+  }
+
+  .navButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .recomendadosConteiner {
+    gap: 1rem;
+    padding: 0.5rem 0.25rem;
+  }
+}

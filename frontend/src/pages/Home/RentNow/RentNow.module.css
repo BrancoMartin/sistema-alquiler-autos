@@ -1,0 +1,176 @@
+.rentNowSection {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.imageContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rentNowImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  min-height: 300px;
+  object-fit: cover;
+}
+
+.overlayContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+}
+
+.textContent {
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+.rentNowTitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 1.1rem;
+  color: #ffff;
+}
+
+.rentNowText {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.buttonContainer {
+  margin-top: 1rem;
+}
+
+.rentNowButton {
+  color: #fff;
+  background: linear-gradient(90deg, #6555fd, #8c6dfb);
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(101, 85, 253, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.rentNowButton:hover {
+  background-color: #5243f3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+.rentNowButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rentNowTitle {
+    font-size: 2.2rem;
+  }
+
+  .rentNowText {
+    font-size: 1.3rem;
+  }
+
+  .rentNowButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .rentNowSection {
+    margin-bottom: 3rem;
+  }
+
+  .overlayContent {
+    padding: 1.5rem;
+  }
+
+  .rentNowTitle {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .rentNowText {
+    font-size: 1rem;
+  }
+
+  .textContent {
+    margin-bottom: 1.5rem;
+  }
+
+  .rentNowButton {
+    padding: 0.7rem 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rentNowSection {
+    margin-bottom: 2rem;
+  }
+
+  .imageContainer {
+    border-radius: 8px;
+  }
+
+  .overlayContent {
+    padding: 1rem;
+  }
+
+  .rentNowTitle {
+    font-size: 1.5rem;
+  }
+
+  .rentNowText {
+    font-size: 0.95rem;
+  }
+
+  .textContent {
+    margin-bottom: 1.2rem;
+  }
+
+  .rentNowButton {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .rentNowTitle {
+    font-size: 1.3rem;
+  }
+
+  .rentNowText {
+    font-size: 0.85rem;
+  }
+
+  .rentNowButton {
+    padding: 0.8rem 1.8rem;
+  }
+}
