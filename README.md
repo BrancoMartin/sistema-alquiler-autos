@@ -9,7 +9,10 @@ Aplicación desarrollada para gestionar el alquiler de vehículos.
 - Control de disponibilidad
 
 ## Tecnologías
-- 
+- React js
+- Node js
+- CSS
+- Javascript
 
 ## Autor
 Proyecto desarrollado en conjunto durante la carrera de Técnico en Programación (UTN Rosario)
