@@ -23,6 +23,7 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 * CSS 
 
 ## ▶️ Cómo ejecutar el proyecto
+## ▶️ Cómo ejecutar el proyecto
 
 ### Backend
 
@@ -30,7 +31,7 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 2. Instalar dependencias:
 
    ```bash
-   pip install -r requirements.txt
+   npm install
    ```
 3. Ejecutar el servidor:
 
@@ -49,8 +50,9 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 3. Ejecutar la aplicación:
 
    ```bash
-   npm run dev
+   npm start
    ```
+
 
 ## 📚 Objetivo del proyecto
 
