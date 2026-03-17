@@ -49,7 +49,7 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 3. Ejecutar la aplicación:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 
