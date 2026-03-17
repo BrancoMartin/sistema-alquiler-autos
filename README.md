@@ -19,7 +19,7 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 
 * React js
 * Node js
-* Base de datos 
+* Base de datos (sqlite), ORM: secuelize
 * CSS 
 
 ## ▶️ Cómo ejecutar el proyecto
