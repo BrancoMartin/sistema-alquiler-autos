@@ -1,12 +1,15 @@
-# 🚗 Sistema de Alquiler de Autos
+# RentCars
+
+## Sistema de Alquiler de Autos
 
 Aplicación desarrollada para la gestión de alquiler de vehículos, permitiendo administrar clientes, autos y operaciones de alquiler.
 
-## 📌 Descripción
+##  Descripción
 
 Este sistema simula el funcionamiento de una empresa de alquiler de autos, permitiendo registrar clientes, gestionar vehículos disponibles y realizar operaciones de alquiler y devolución.
+Con una interfaz intuitiva y amigable para el usuario que desea rentar un auto por unas horas / días / semanas . 
 
-## ⚙️ Funcionalidades
+##  Funcionalidades
 
 * Registro de clientes
 * Alta y gestión de vehículos
@@ -15,14 +18,14 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
 * Control de disponibilidad
 * Listado de información
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 * React js
 * Node js
 * Base de datos (sqlite), ORM: secuelize
 * CSS 
 
-## ▶️ Cómo ejecutar el proyecto
+##  Cómo ejecutar el proyecto
 
 ### Backend
 
@@ -53,11 +56,10 @@ Este sistema simula el funcionamiento de una empresa de alquiler de autos, permi
    ```
 
 
-## 📚 Objetivo del proyecto
+##  Objetivo del proyecto
 
 Proyecto desarrollado en conjunto durante la carrera de Técnico en Programación en UTN Rosario, con el objetivo de aplicar conocimientos de desarrollo web, lógica de negocio y trabajo en equipo.
 
-## 👥 Autor
+##  Autor
 
-Proyecto grupal.
-Participación en el desarrollo del sistema de gestión de alquiler de autos.
+Branco Antuña, Juan Manuel Sosa
